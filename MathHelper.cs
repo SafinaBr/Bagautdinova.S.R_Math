@@ -1,7 +1,6 @@
-﻿// Импорт пространства имен с калькуляторами из библиотеки CRE.MathTasks.Calculators
-using CRE.MathTasks.Calculators;
+﻿using CRE.MathTasks.Calculators;
+using System.Numerics;
 
-// Определение пространства имен CRE.MathTasks
 namespace CRE.MathTasks;
 
 // Объявление статического класса MathHelper
@@ -32,5 +31,14 @@ public static class MathHelper
                 Console.WriteLine($"{x}\t\t Функция не определена");
             }
         }
+    }
+
+    public static double Factorial(int n)
+    {
+        double factorial = 1;
+        for (int i = 1; i <= n; i++)
+            factorial *= i;
+
+        return factorial;
     }
 }
